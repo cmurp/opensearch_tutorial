@@ -20,6 +20,7 @@ services:
         hard: 65536
     volumes:
       - opensearch-data:/usr/share/opensearch/data # Creates volume called opensearch-data1 and mounts it to the container
+      - custom-opensearch.yml:/usr/share/opensearch/config/opensearch.yml # custom properties file
     ports:
       - 9200:9200 # REST API
       - 9600:9600 # Performance Analyzer
